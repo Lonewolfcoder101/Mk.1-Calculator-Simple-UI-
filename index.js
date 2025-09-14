@@ -3,3 +3,22 @@ function appendToDisplay(input)
 {
     display.innerText += input;
 }
+function clearDisplay()
+{
+    display.value = " ";
+}
+function calculateResult()
+{
+    try
+    {
+        display.value = eval(display.value);
+    }
+    catch(error)
+    {
+        display.value = "Error";
+    }
+}
+function backspace()
+{
+    display.value = display.value.slice(0, -1);
+}
